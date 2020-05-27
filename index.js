@@ -1,11 +1,19 @@
 const core = require('@actions/core');
 const github = require('@actions/github');
+const licenseFinder = require("./license-finder");
 
 try {
     const namespaces = core.getInput('namespaces');
-    console.log(`Searching ${namespaces}!`);
+    console.log(`Searching ${namespaces}`);
 
-    core.error('License not found')
+    var missing = licenseFinder.findMissingLicenses(namespaces.split(','));
+
+    if(missing.length > 0) {
+        let missingString = missing.join("\n");
+        throw new Error("LICENSE.txt missing from these paths:\n" + missingString);
+    } else {
+        console.log('No errors found');
+    }
 } catch (error) {
     core.setFailed(error.message);
 }
