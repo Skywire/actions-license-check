@@ -1,0 +1,12 @@
+{
+  "name": "actions-license-check",
+  "version": "1.0.0",
+  "description": "Check there is a license file in each custom module directory",
+  "main": "index.js",
+  "author": "Skywire Tech Team <tech@skywire.co.uk>",
+  "license": "proprietary",
+  "dependencies": {
+    "@actions/core": "^1.2.4",
+    "@actions/github": "^2.2.0"
+  }
+}

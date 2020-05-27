@@ -1,0 +1,12 @@
+name: 'License Check'
+description: 'Check there is a license file in each custom module directory'
+inputs:
+  namespaces:  # Module namespaces to check
+    description: 'Comma separated list of namespaces'
+    required: true
+#outputs:
+#  time: # id of output
+#    description: 'The time we greeted you'
+runs:
+  using: 'node12'
+  main: 'index.js'
