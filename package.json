@@ -4,12 +4,13 @@
   "description": "Check there is a license file in each custom module directory",
   "main": "index.js",
   "author": "Skywire Tech Team <tech@skywire.co.uk>",
-  "license": "proprietary",
   "dependencies": {
     "@actions/core": "^1.2.4",
     "@actions/github": "^2.2.0",
     "chai": "^4.2.0",
-    "mocha": "^7.2.0"
+    "fs": "0.0.1-security",
+    "mocha": "^7.2.0",
+    "mock-fs": "^4.12.0"
   },
   "scripts": {
     "test": "mocha"
