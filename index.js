@@ -11,8 +11,6 @@ try {
     if(missing.length > 0) {
         let missingString = missing.join("\n");
         throw new Error("LICENSE.txt missing from these paths:\n" + missingString);
-    } else {
-        console.log('No errors found');
     }
 } catch (error) {
     core.setFailed(error.message);
