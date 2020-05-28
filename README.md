@@ -6,7 +6,7 @@ This action checks for the existence of a LICENSE.txt file in every module withi
 
 ### `namespaces`
 
-**Required** A commad separated list of namespaces, e.g. `app/code/Skywire,app/code/ClientNamespace`.
+**Required** A comma separated list of namespaces, e.g. `app/code/Skywire,app/code/ClientNamespace`.
 
 ## Example usage
 
