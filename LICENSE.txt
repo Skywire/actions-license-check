@@ -1,0 +1,17 @@
+Closed Source License
+
+Terms and Conditions of Use
+
+Installing or using any module (Software) provided by Skywire means agreeing to the following statements (Agreement):
+
+Skywire is the copyright holder of the Software. The Software or a portion of it is copyrightable matter and is liable to be protected by the law. Any activity that infringes the terms of this Agreement or violates copyright law will be prosecuted according to the current law.
+Skywire reserves the right to revoke a license if the Terms of the License Agreement are breached. Skywire also reserves the right to revoke any invalid license.
+None of the Software, either whole or parts thereof can be used in any other software or product or.
+The Software and supporting Documentation may not be given, sold, distributed, sub-licensed, rented, leased or lent to anyone.  Neither can the Software be placed on a server so that it is accessible via a  public network such as the Internet for distribution purposes.
+Skywire reserves the right to publish a selected list of users of its Software.
+Skywire is not liable for any damages caused to the user of its Software.  This includes but is not limited to, any loss of profits, incidents or consequences and any problems concerning their data or their business arising out of the use or inability to use this Software
+Skywire is not liable for any illegal use of its Software or liable for any prosecution arising from the illegal use of its Software.
+Upgrades
+Skywire continuously tries to improve its products so as to offer the user the best functionality and usability.
+
+Upgrades will be available for the time that Skywire is responsible for the active development and maintenance of the website containing the licensed module.
