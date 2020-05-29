@@ -8,6 +8,10 @@ This action checks for the existence of a LICENSE.txt file in every module withi
 
 **Required** A comma separated list of namespaces, e.g. `app/code/Skywire,app/code/ClientNamespace`.
 
+### `auto_generate`
+
+Automatically generate and commit missing license files? (default false)
+
 ## Example usage
 
 ```yaml
