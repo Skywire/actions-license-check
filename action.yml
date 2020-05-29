@@ -4,6 +4,10 @@ inputs:
   namespaces:  # Module namespaces to check
     description: 'Comma separated list of namespaces'
     required: true
+  auto_generate:
+      description: Automatically generate and commit missing license files (true / false)
+      required: false
+      default: false
 runs:
   using: 'node12'
   main: 'index.js'

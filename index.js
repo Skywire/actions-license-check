@@ -11,9 +11,14 @@ try {
 
     if(missing.length > 0) {
         let missingString = missing.join("\n");
-        console.log("LICENSE.txt missing from these paths:\n" + missingString);
-        console.log('Auto generating missing licenses');
-        licenseGenerator.addLicenses(missing);
+        const message = ("LICENSE.txt missing from these paths:\n" + missingString);
+        if(core.getInput('auto_generate')) {
+            console.log(message);
+            console.log('Auto generating missing licenses');
+            licenseGenerator.addLicenses(missing);
+        } else {
+            throw new Error(message);
+        }
     }
 } catch (error) {
     core.setFailed(error.message);
