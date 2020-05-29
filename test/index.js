@@ -5,7 +5,7 @@ const licenseGenerator = require('../license-generator.js')
 const fsmock = require('mock-fs');
  
 fsmock({
-  "LICENSE.txt": 'Lorem ispsum dolor sit amet',
+  "LICENSE.dist": 'Lorem ispsum dolor sit amet',
   'app/code/Foo': {
     'Foo1': {/** empty directory */},
     'Foo2': {'LICENSE.txt': 'file content here',},
