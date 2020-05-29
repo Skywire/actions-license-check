@@ -3,9 +3,13 @@ const { resolve } = require('path')
 
 module.exports = {
     addLicenses: function(paths) {
-        const license = 'LICENSE.txt';
+        const license = resolve(__dirname,'LICENSE.txt');
         paths.forEach(path => {
-            const dest = path + '/LICENSE.txt';
+            var workspace = process.env.GITHUB_WORKSPACE;
+            if(!workspace) {
+                workspace = __dirname;
+            }
+            const dest = resolve(workspace, path) + '/LICENSE.txt';
             copyFileSync(license, dest);
           });
     }
