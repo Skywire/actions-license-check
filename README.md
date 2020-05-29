@@ -16,3 +16,20 @@ This action checks for the existence of a LICENSE.txt file in every module withi
     with:
         namespaces: app/code/Skywire,app/code/ClientNamespace
 ```
+### Auto generating licenses
+
+To auto generate missing licenses use the `auto_generate` argument and add a commit action to your workflow
+
+```yaml
+-   name: Check licenses exist in module directories and generate if they don't
+    uses: skywire/actions-license-check@master
+    with:
+        namespaces: app/code/Skywire,app/code/ClientNamespace
+        auto_generate: true
+    # Commit the generated files
+    -   uses: EndBug/add-and-commit@v4
+        with:
+          add: app/code/*LICENSE.txt*
+          message: "Add missing module licenses"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

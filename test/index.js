@@ -1,9 +1,11 @@
-var chai = require('chai');
-var licenseFinder = require('../license-finder.js')
-
+const { readdirSync } = require('fs')
+const chai = require('chai');
+const licenseFinder = require('../license-finder.js')
+const licenseGenerator = require('../license-generator.js')
 const fsmock = require('mock-fs');
  
 fsmock({
+  "LICENSE.dist": 'Lorem ispsum dolor sit amet',
   'app/code/Foo': {
     'Foo1': {/** empty directory */},
     'Foo2': {'LICENSE.txt': 'file content here',},
@@ -30,4 +32,27 @@ describe('License Finder', function () {
             chai.expect(["app/code/Foo/Foo1", "app/code/Bar/Bar2"]).to.eql(missing);
         });
     });
+});
+
+describe('License Generator', function () {
+  describe('#addLicenses', function () {
+      it('Should add license files to missing paths', function () {
+          paths = [
+            'app/code/Foo/Foo1',
+            'app/code/Bar/Bar2',
+          ];
+
+          paths.forEach(path => {
+            const files = readdirSync(path);
+            chai.expect(files).not.include('LICENSE.txt');
+          });
+
+          licenseGenerator.addLicenses(paths);
+
+          paths.forEach(path => {
+            const files = readdirSync(path);
+            chai.expect(files).include('LICENSE.txt');
+          });
+      });
+  });
 });
