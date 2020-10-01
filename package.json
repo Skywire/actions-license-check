@@ -5,7 +5,7 @@
   "main": "index.js",
   "author": "Skywire Tech Team <tech@skywire.co.uk>",
   "dependencies": {
-    "@actions/core": "^1.2.4",
+    "@actions/core": "^1.2.6",
     "@actions/github": "^2.2.0",
     "chai": "^4.2.0",
     "fs": "0.0.1-security",
